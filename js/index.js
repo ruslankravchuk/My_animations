@@ -42,7 +42,9 @@ console.log(Header_II.hero)*/
 
 let items_for_anim = document.querySelectorAll('.anim');
 document.querySelector('.frozen').addEventListener('click', remote_anim)
-document.querySelector('.boolid').addEventListener('click', change_anim_name)
+
+
+
 function remote_anim () {
 
     for (let i = 0; i<items_for_anim.length; i++)   
@@ -62,3 +64,18 @@ function remote_anim () {
         }
     }
 }
+
+
+function anim_boom () {
+
+   let control_style_anim = document.querySelector('.submarine')
+
+}
+
+setTimeout(() => {
+    let new_elem = document.createElement("div");    
+    new_elem.innerText = "Як тобі таке Ілон Маск!!!";
+    new_elem.classList.add("popup");
+    document.querySelector('body').appendChild(new_elem);
+
+}, 25000 )

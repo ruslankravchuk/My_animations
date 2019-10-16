@@ -435,3 +435,10 @@ main {
         width: .7vw; }
   main .anim {
     animation-play-state: paused; }
+  main .popup {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    background-color: white;
+    min-width: 200px;
+    min-height: 200px; }
