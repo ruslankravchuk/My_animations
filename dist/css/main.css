@@ -752,14 +752,14 @@ main .wave>div:nth-child(1) {
 }
 
 main .wave .wave_1 {
-  background-image: url("http://localhost:3000//img/wave.png");
+  background-image: url("../img/wave.png");
   -webkit-animation: 4s infinite alternate paused anim_wave_1;
   animation: 4s infinite alternate paused anim_wave_1;
   width: 115vw;
 }
 
 main .wave .wave_2 {
-  background-image: url("http://localhost:3000//img/wave_2.png");
+  background-image: url("../img/wave_2.png");
   -webkit-animation: 4s infinite alternate paused anim_wave_2;
   animation: 4s infinite alternate paused anim_wave_2;
   width: 115vw;
@@ -803,7 +803,7 @@ main .big_ice img:last-child {
 main .mine {
   width: 3.5vw;
   height: 4vw;
-  background-image: url("http://localhost:3000//img/mine.png");
+  background-image: url("../img/mine.png");
   position: absolute;
   top: 16.9vw;
   background-size: 1232% 736%;
@@ -873,7 +873,7 @@ main .stars_on_sky .frozen {
 main .stars_on_sky .boolid {
   width: 5vw;
   height: 5vw;
-  background-image: url("http://localhost:3000//img/comet.png");
+  background-image: url("../img/comet.png");
   background-color: rgba(36,124,178,.1);
   outline-style: none;
   cursor: pointer;
