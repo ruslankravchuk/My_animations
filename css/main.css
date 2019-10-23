@@ -78,45 +78,49 @@ legend {
     transform: translateX(10vw) scale(1) rotateY(0deg);
     filter: blur(0px); } }
 
-@keyframes torped {
+@keyframes torpeds {
   0% {
-    transform: translateX(30vw) scale(0.7) rotateY(180deg) skew(0, 10deg); }
+    transform: translateX(10vw) scale(0.7) rotateY(180deg) skew(0, 10deg); }
   49% {
-    transform: translateX(-60vw) scale(0.7) rotateY(180deg) skew(0, 10deg);
+    transform: translateX(-60vw) scale(0.7) rotateY(180deg) skew(0, 20deg);
     filter: blur(1px); }
   58% {
-    transform: translateX(-110vw) scale(0.3) rotateY(180deg) skew(0, 10deg);
-    filter: blur(5px); }
-  60% {
-    transform: translateX(-110vw) scale(0.3) rotateY(0deg) skew(0, 10deg);
+    transform: translateX(-170vw) scale(0.5) rotateY(180deg) skew(0, 20deg);
+    filter: blur(1px); }
+  59% {
+    transform: translateX(-190vw) scale(0.3) rotateY(0deg) skew(0, 20deg);
     filter: blur(5px); }
   100% {
-    transform: translateX(40vw) scale(0.5) rotateY(0deg) skew(0, -10deg);
+    transform: translateX(10vw) scale(0.3) rotateY(0deg) skew(0, 10deg);
     filter: blur(0px); } }
 
-@keyframes torped_boom {
+@keyframes torpeds_boom {
   0% {
     transform: translateX(-10vw) rotateY(180deg) skew(0, 16deg);
     opacity: 1; }
   48% {
     transform: translateX(-77vw) rotateY(180deg) skew(0, 16deg);
     opacity: 1; }
-  60% 100% {
+  56%, 100% {
     transform: translateX(-77vw) rotateY(180deg) skew(0, 16deg);
     opacity: 0; } }
 
 @keyframes anim_mine_boom {
   0% {
     opacity: 0; }
-  19% {
+  24% {
     opacity: 0; }
-  20% {
+  26% {
     opacity: 1; }
   55% {
     opacity: 1; }
   60% {
     opacity: 0; }
   100% {
+    opacity: 0; } }
+
+@keyframes anim_mine_pasive {
+  0%, 100% {
     opacity: 0; } }
 
 @keyframes anim_fire_boom {
@@ -133,6 +137,10 @@ legend {
   70% {
     opacity: 1; }
   100% {
+    opacity: 0; } }
+
+@keyframes anim_fire_pasive {
+  0%, 100% {
     opacity: 0; } }
 
 @keyframes anim_bubbl {
@@ -177,6 +185,9 @@ legend {
   100% {
     transform: translateY(0vw);
     opacity: 1; } }
+
+@keyframes anim_flag {
+  opacity: 0; }
 
 @keyframes anim_wave_1 {
   0%, 100% {
@@ -245,6 +256,10 @@ main {
   position: relative;
   background-size: cover;
   overflow: hidden; }
+  main .anim_u-96_pasiv {
+    animation-name: anim_u-96 !important; }
+  main .anim_u-96_boom {
+    animation-name: anim_u-96_boom !important; }
   main .submarine {
     position: absolute;
     bottom: .4vw;
@@ -252,7 +267,7 @@ main {
     max-height: 13vw;
     z-index: 1;
     min-width: 24vw;
-    animation: anim_u-96_boom 20s linear infinite normal paused; }
+    animation: 20s linear infinite normal paused; }
     main .submarine > div:first-child {
       min-height: 17vw;
       width: 19vw;
@@ -264,12 +279,16 @@ main {
         left: 3.3vw;
         width: 1.7vw;
         z-index: -1; }
+    main .submarine .anim_cat_boom {
+      animation-name: anim_cat_boom !important; }
+    main .submarine .anim_cat_pasiv {
+      animation-name: anim_cat_pasiv !important; }
     main .submarine .cat {
       position: absolute;
       z-index: -1;
       left: 15%;
       top: 4.8vw;
-      animation: anim_cat_boom 20s linear infinite normal paused; }
+      animation: 20s linear infinite normal paused; }
       main .submarine .cat img {
         transform: rotate(-38deg);
         width: 6.5vw; }
@@ -303,11 +322,11 @@ main {
       background-repeat: no-repeat;
       background-size: cover; }
     main .wave .wave_1 {
-      background-image: url(http://localhost:3000//img/wave.png);
+      background-image: url(../img/wave.png);
       animation: anim_wave_1 4s ease infinite alternate paused;
       width: 115vw; }
     main .wave .wave_2 {
-      background-image: url(http://localhost:3000//img/wave_2.png);
+      background-image: url(../img/wave_2.png);
       animation: anim_wave_2 4s ease infinite alternate  paused;
       width: 115vw; }
   main .big_ice {
@@ -334,33 +353,49 @@ main {
       top: -7vw;
       left: 2.5vw;
       opacity: 0;
-      animation: anim_flag_boom 20s linear infinite normal paused; }
+      animation: 20s linear infinite normal paused; }
+    main .big_ice .anim_flag_boom {
+      animation-name: anim_flag_boom !important; }
+    main .big_ice .anim_flag_pasive {
+      animation-name: anim_flag !important; }
+  main .anim_mine_boom {
+    animation-name: anim_mine_boom !important; }
+  main .anim_mine_pasiv {
+    animation-name: anim_mine_pasive !important; }
   main .mine {
     width: 3.5vw;
     height: 4vw;
-    background-image: url(http://localhost:3000//img/mine.png);
+    background-image: url(../img/mine.png);
     position: absolute;
     top: 16.9vw;
     background-size: 1232% 736%;
     background-position: 66% 45%;
     z-index: 1;
     right: 12vw;
-    animation: anim_mine_boom 20s linear infinite normal paused; }
-  main .fire_boom {
+    animation: 20s linear infinite normal paused; }
+  main .anim_fire_boom {
+    animation-name: anim_fire_boom !important; }
+  main .anim_fire_pasiv {
+    animation-name: anim_fire_pasive !important; }
+  main .amin_fire {
     width: 3.5vw;
     height: 4vw;
     position: absolute;
     top: 16.9vw;
     z-index: 1;
     right: 12vw;
-    animation: anim_fire_boom  20s linear infinite normal paused; }
+    animation: 20s linear infinite normal paused; }
+  main .anim_torpeds_boom {
+    animation-name: torpeds_boom !important; }
+  main .anim_torpeds_pasiv {
+    animation-name: torpeds !important; }
   main .torpeds {
     position: absolute;
     left: 160vw;
     top: 40vw;
     display: flex;
     flex-wrap: wrap;
-    animation: torped_boom 20s linear infinite normal paused; }
+    animation: 20s linear infinite normal paused; }
   main .aurora, main .stars_on_sky {
     min-height: 23vw;
     min-width: 100%;
@@ -389,7 +424,7 @@ main {
     main .stars_on_sky .boolid {
       width: 5vw;
       height: 5vw;
-      background-image: url(http://localhost:3000//img/comet.png);
+      background-image: url(../img/comet.png);
       background-color: rgba(36, 124, 178, 0.1);
       outline-style: none;
       cursor: pointer;
@@ -435,10 +470,19 @@ main {
         width: .7vw; }
   main .anim {
     animation-play-state: paused; }
-  main .popup {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 22px;
-    background-color: white;
-    min-width: 200px;
-    min-height: 200px; }
+
+.popup {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 22px;
+  background-color: white;
+  min-width: 200px;
+  min-height: 200px;
+  position: absolute;
+  top: 10vw;
+  right: 40vw;
+  border-radius: 32px;
+  padding: 3vw 1vw;
+  color: red;
+  font-family: "roboto";
+  box-sizing: border-box; }

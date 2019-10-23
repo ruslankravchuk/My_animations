@@ -9,7 +9,11 @@ main
     +flex    
     position: relative 
     background-size: cover
-    overflow: hidden    
+    overflow: hidden
+    .anim_u-96_pasiv
+        animation-name: anim_u-96!important
+    .anim_u-96_boom
+        animation-name: anim_u-96_boom!important    
     .submarine
      position: absolute
      bottom: .4vw
@@ -17,7 +21,7 @@ main
      max-height: 13vw
      z-index: 1
      min-width: 24vw     
-     animation: anim_u-96_boom 20s linear infinite normal paused
+     animation: 20s linear infinite normal paused         
      >div:first-child 
         min-height: 17vw
         width: 19vw
@@ -29,12 +33,16 @@ main
          left: 3.3vw
          width: 1.7vw
          z-index: -1
+     .anim_cat_boom 
+           animation-name: anim_cat_boom!important
+     .anim_cat_pasiv
+           animation-name: anim_cat_pasiv!important   
      .cat 
        position: absolute
        z-index: -1       
        left: 15%
        top: 4.8vw       
-       animation: anim_cat_boom 20s linear infinite normal paused 
+       animation: 20s linear infinite normal paused        
        img 
           transform: rotate(-38deg) 
           width: 6.5vw                 
@@ -74,11 +82,11 @@ main
       background-repeat: no-repeat
       background-size: cover
      .wave_1
-          background-image: url(http://localhost:3000//img/wave.png)
+          background-image: url(../img/wave.png)
           animation: anim_wave_1 4s ease infinite alternate paused 
           width: 115vw
      .wave_2
-          background-image: url(http://localhost:3000//img/wave_2.png) 
+          background-image: url(../img/wave_2.png) 
           animation: anim_wave_2 4s ease infinite alternate  paused 
           width: 115vw     
     .big_ice
@@ -104,33 +112,50 @@ main
          top: -7vw
          left: 2.5vw
          opacity: 0
-         animation: anim_flag_boom 20s linear infinite normal paused 
+         animation: 20s linear infinite normal paused          
+      .anim_flag_boom
+         animation-name: anim_flag_boom!important
+      .anim_flag_pasive
+         animation-name: anim_flag!important
+    .anim_mine_boom
+       animation-name:  anim_mine_boom!important 
+    .anim_mine_pasiv
+       animation-name:  anim_mine_pasive!important   
     .mine
        width: 3.5vw
        height: 4vw
-       background-image: url(http://localhost:3000//img/mine.png)
+       background-image: url(../img/mine.png)
        position: absolute
        top: 16.9vw
        background-size: 1232% 736%
        background-position: 66% 45%
        z-index: 1 
        right: 12vw        
-       animation: anim_mine_boom 20s linear infinite normal paused
-    .fire_boom
+       animation: 20s linear infinite normal paused       
+    .anim_fire_boom
+           animation-name: anim_fire_boom!important
+    .anim_fire_pasiv
+           animation-name: anim_fire_pasive!important
+    .amin_fire
        width: 3.5vw
        height: 4vw       
        position: absolute
        top: 16.9vw       
        z-index: 1 
        right: 12vw        
-       animation: anim_fire_boom  20s linear infinite normal paused
-
+       animation: 20s linear infinite normal paused
+       
+       
+    .anim_torpeds_boom
+          animation-name: torpeds_boom!important
+    .anim_torpeds_pasiv
+          animation-name: torpeds!important       
     .torpeds 
       position: absolute
       left: 160vw
       top: 40vw      
       +flex 
-      animation: torped_boom 20s linear infinite normal paused 
+      animation: 20s linear infinite normal paused       
     .aurora, .stars_on_sky
       min-height: 23vw
       min-width: 100%
@@ -159,7 +184,7 @@ main
       .boolid
        width: 5vw
        height: 5vw
-       background-image: url(http://localhost:3000//img/comet.png)                     
+       background-image: url(../img/comet.png)                     
        background-color: rgba(36,124,178, 0.1)
        outline-style: none
        cursor: pointer
@@ -208,12 +233,22 @@ main
 
     .anim 
           animation-play-state: paused 
-    .popup
-      +flex 
-      font-size: 22px
-      background-color: white
-      min-width: 200px
-      min-height: 200px
+.popup
+  +flex 
+  font-size: 22px
+  background-color: white
+  min-width: 200px
+  min-height: 200px
+  position: absolute
+  top: 10vw
+  right: 40vw
+  border-radius: 32px 
+  padding: 3vw 1vw
+  color: red
+  font-family: "roboto"
+  box-sizing: border-box
+
+
 
      
 

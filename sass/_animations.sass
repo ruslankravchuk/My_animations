@@ -30,39 +30,39 @@
        transform: translateX(10vw) scale(1) rotateY(0deg)
        filter: blur(0px)
 
-@keyframes torped
+@keyframes torpeds
     0% 
-      transform: translateX(30vw) scale(.7) rotateY(180deg) skew(0, 10deg)    
+      transform: translateX(10vw) scale(.7) rotateY(180deg) skew(0, 10deg)    
     49% 
-       transform: translateX(-60vw) scale(.7) rotateY(180deg) skew(0, 10deg) 
+       transform: translateX(-60vw) scale(.7) rotateY(180deg) skew(0, 20deg) 
        filter: blur(1px)  
     58% 
-       transform: translateX(-110vw) scale(.3) rotateY(180deg) skew(0, 10deg)      
-       filter: blur(5px)
-    60% 
-       transform: translateX(-110vw) scale(.3) rotateY(0deg) skew(0, 10deg)      
+       transform: translateX(-170vw) scale(.5) rotateY(180deg) skew(0, 20deg)      
+       filter: blur(1px)
+    59% 
+       transform: translateX(-190vw) scale(.3) rotateY(0deg) skew(0, 20deg)      
        filter: blur(5px)    
     100%
-       transform: translateX(40vw) scale(.5) rotateY(0deg)skew(0, -10deg)
+       transform: translateX(10vw) scale(.3) rotateY(0deg)skew(0, 10deg)
        filter: blur(0px)
 
-@keyframes torped_boom
+@keyframes torpeds_boom
     0% 
       transform: translateX(-10vw)  rotateY(180deg) skew(0, 16deg)
       opacity: 1        
     48% 
       transform: translateX(-77vw)  rotateY(180deg) skew(0, 16deg) 
-      opacity: 1        
-    60% 100%
+      opacity: 1                
+    56%, 100%
        transform: translateX(-77vw) rotateY(180deg)  skew(0, 16deg) 
        opacity: 0    
 
 @keyframes anim_mine_boom 
     0% 
-       opacity: 0 
-    19% 
-       opacity: 0     
-    20%
+       opacity: 0
+    24% 
+       opacity: 0    
+    26%
        opacity: 1
     55%
        opacity: 1
@@ -70,6 +70,10 @@
        opacity: 0
     100%
        opacity: 0 
+
+@keyframes anim_mine_pasive
+    0%, 100%
+       opacity: 0        
 
 @keyframes anim_fire_boom 
     0% 
@@ -85,7 +89,10 @@
     70%    
        opacity: 1
     100%
-       opacity: 0        
+       opacity: 0  
+@keyframes anim_fire_pasive
+    0%, 100%
+        opacity: 0       
 
 @keyframes  anim_bubbl
     0% 
@@ -127,7 +134,11 @@
        opacity: 1    
     100% 
         transform: translateY(0vw) 
-        opacity: 1       
+        opacity: 1
+
+@keyframes anim_flag
+        opacity: 0 
+
 @keyframes anim_wave_1 
     0%, 100%
        transform: translateX(-15vw)
